@@ -141,7 +141,7 @@ section {
 }
 
 .home-explore .circle:hover {
-  animation: pulse 1s infinite; /* Adjust animation duration as needed */
+  animation: pulse 1s linear; /* Adjust animation duration as needed */
 }
 
 .circle a {
