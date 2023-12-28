@@ -8,13 +8,14 @@
 }
 .destination {
   max-width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url(/assets/destination/background-destination-desktop.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   padding-top: 30px;
   position: relative;
+  padding: 35px;
 }
 
 header {
@@ -22,6 +23,7 @@ header {
   align-items: center;
   gap: 5rem;
   padding-left: 50px;
+  margin-bottom: 3rem;
   /* position: relative; */
 }
 .logo {
@@ -68,6 +70,100 @@ header {
   display: none;
   cursor: pointer;
 }
+section {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 2rem;
+}
+.head {
+  color: white;
+  padding-left: 5rem;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  font-size: 20px;
+}
+.head span {
+  color: gray;
+}
+
+.image {
+  max-width: 80%;
+  height: 100%;
+  object-fit: cover;
+  animation: rotateMap 5s linear infinite;
+}
+
+@keyframes rotateMap {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.destination-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.destination-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: whitesmoke;
+}
+.select {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 40px;
+  font-size: small;
+  margin-bottom: 1rem;
+}
+.btn {
+  cursor: pointer;
+}
+.btn:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+.name {
+  font-weight: 300;
+  font-size: 70px;
+  text-transform: uppercase;
+}
+.info {
+  width: 90%;
+  font-size: 14px;
+  line-height: 30px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid gray;
+}
+aside {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 1rem;
+}
+aside h4 {
+  font-size: x-small;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: gray;
+}
+aside h3 {
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+}
 
 @media screen and (max-width: 850px) {
   .line {
@@ -85,6 +181,7 @@ header {
     transform: translate(100%);
     opacity: 0;
     transition: all 0.5s linear;
+    z-index: 1000000;
   }
   .nav.active {
     transform: translate(0);
@@ -114,6 +211,9 @@ header {
   .burger {
     display: block;
   }
+  .image {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -133,13 +233,42 @@ header {
   .nav .close {
     margin-right: 0px;
   }
+  .head {
+    padding-left: 1rem;
+  }
+  section {
+    flex-direction: column;
+    width: 100%;
+    gap: 5rem;
+  }
+  .destination-img {
+    width: 100%;
+  }
+  .destination-text {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .image {
+    max-width: 60%;
+  }
 }
-
+@media screen and (max-width: 500px) {
+  .image {
+    max-width: 90%;
+  }
+  .destination {
+    padding: 20px 4px 30px 4px;
+  }
+}
 @media screen and (max-width: 450px) {
   .destination {
     background-image: url(/assets/destination/background-destination-mobile.jpg);
   }
   .nav {
     width: 60%;
+  }
+  .head {
+    font-size: 14px;
   }
 }

@@ -137,6 +137,7 @@ section {
     transform: translate(100%);
     opacity: 0;
     transition: all 0.9s ease-in-out;
+    z-index: 1000000;
   }
   .nav.active {
     transform: translate(0);
