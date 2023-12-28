@@ -8,7 +8,7 @@
 }
 .crew {
   max-width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url(/assets/crew/background-crew-desktop.jpg);
   background-position: center;
   background-size: cover;
@@ -22,6 +22,7 @@ header {
   align-items: center;
   gap: 5rem;
   padding-left: 50px;
+  margin-bottom: 3rem;
   /* position: relative; */
 }
 .logo {
@@ -68,8 +69,79 @@ header {
   display: none;
   cursor: pointer;
 }
-
+.head {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 4rem;
+  letter-spacing: 0.3rem;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.crew-text {
+  width: 50%;
+  padding-left: 4rem;
+  color: white;
+}
+.crew-text .role {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  color: gray;
+}
+.crew-text .name {
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 400;
+}
+.crew-text .info {
+  color: gray;
+  margin-bottom: 3rem;
+  width: 85%;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btns .btn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.colored {
+  background-color: white;
+}
+.crew-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crew-image img {
+  width: 70%;
+}
+@media screen and (max-width: 950px) {
+  .crew-text .name {
+    font-size: 40px;
+  }
+  .crew-image img {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 850px) {
+  .crew-text .name {
+    font-size: 30px;
+  }
+  .crew-text .info {
+    width: 100%;
+  }
   .line {
     display: none;
   }
@@ -117,6 +189,31 @@ header {
 }
 
 @media screen and (max-width: 760px) {
+  header {
+    margin-bottom: 2rem;
+  }
+  .head {
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+  }
+  .btns {
+    align-items: center;
+    justify-content: center;
+  }
+  section {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+  .crew-image {
+    width: 100%;
+  }
+  .crew-text {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+  }
   .crew {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -136,6 +233,9 @@ header {
 }
 
 @media screen and (max-width: 450px) {
+  .crew-image img {
+    width: 100%;
+  }
   .crew {
     background-image: url(/assets/crew/background-crew-mobile.jpg);
   }

@@ -130,7 +130,7 @@ section {
 .btn {
   cursor: pointer;
 }
-.btn:hover {
+.stay {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 6px;

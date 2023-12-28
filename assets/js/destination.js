@@ -87,3 +87,16 @@ closeMenu.addEventListener("click", function () {
   menu.classList.remove("active");
   document.body.classList.remove("static");
 });
+
+const selection = document.getElementById("select");
+const btns = selection.querySelectorAll(".btn");
+btns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    btns.forEach(function (present) {
+      if (present !== btn) {
+        present.classList.remove("stay");
+      }
+    });
+    btn.classList.add("stay");
+  });
+});
