@@ -44,6 +44,7 @@ const btn2 = document.getElementById("btn2");
 const btn3 = document.getElementById("btn3");
 const btn4 = document.getElementById("btn4");
 
+btn1.classList.add("stay");
 const menu = document.getElementById("menu");
 const openMenu = document.getElementById("burger");
 const closeMenu = document.getElementById("close");
