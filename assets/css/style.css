@@ -114,10 +114,11 @@ section {
   border-radius: 50%;
   background-color: white;
 }
-.circle h2 {
-  font-weight: 400;
+.circle a {
+  font-weight: 100;
   letter-spacing: 3px;
-  font-size: 25px;
+  font-size: 20px;
+  text-decoration: none;
   color: grey;
 }
 
