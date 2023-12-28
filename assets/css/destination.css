@@ -6,9 +6,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
 .destination {
   max-width: 100vw;
-  height: 100%;
+  min-height: 100vh;
   background-image: url(/assets/destination/background-destination-desktop.jpg);
   background-position: center;
   background-size: cover;
@@ -16,6 +20,19 @@
   padding-top: 30px;
   position: relative;
   padding: 35px;
+  animation: zoomInOut 20s linear infinite forwards;
+}
+
+@keyframes zoomInOut {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 100%;
+  }
 }
 
 header {
@@ -93,9 +110,28 @@ section {
   max-width: 80%;
   height: 100%;
   object-fit: cover;
-  animation: rotateMap 5s linear infinite;
+  animation:
+    rotateMap 5s linear infinite,
+    zoomImage 20s linear infinite forwards;
 }
 
+@keyframes zoomImage {
+  0% {
+    transform: scale(0.1) translate(0, 0);
+  }
+  25% {
+    transform: scale(0.3) translate(100px, 100px);
+  }
+  50% {
+    transform: scale(0.5) translate(100px, 0px); /* Adjust the scale factor as needed */
+  }
+  75% {
+    transform: scale(0.7) translate(0px, 0px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
 @keyframes rotateMap {
   from {
     transform: rotate(0deg);
@@ -163,6 +199,20 @@ aside h3 {
   text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 890px) {
+  @keyframes zoomInOut {
+    0% {
+      background-size: 400%;
+    }
+    50% {
+      background-size: 250%;
+    }
+    100% {
+      background-size: 200%;
+    }
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -276,5 +326,16 @@ aside h3 {
   }
   .head {
     font-size: 14px;
+  }
+  @keyframes zoomInOut {
+    0% {
+      background-size: 120%;
+    }
+    50% {
+      background-size: 140%;
+    }
+    100% {
+      background-size: 170%;
+    }
   }
 }
