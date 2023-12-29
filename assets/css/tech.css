@@ -164,6 +164,9 @@ section {
   }
 }
 @media screen and (max-width: 890px) {
+  .tech {
+    animation: unset;
+  }
   .name {
     font-size: 30px;
   }
@@ -236,6 +239,7 @@ section {
     padding-bottom: 30px;
     height: 100%;
     background-image: url(/assets/technology/background-technology-tablet.jpg);
+    animation: zoomInOut 20s linear infinite forwards;
   }
 
   header {
@@ -301,7 +305,9 @@ section {
   .info {
     font-size: 14px;
   }
-
+  .head {
+    font-size: 14px;
+  }
   @keyframes zoomInOut {
     0% {
       background-size: 120%;

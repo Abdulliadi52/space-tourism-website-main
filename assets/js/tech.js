@@ -49,7 +49,6 @@ closeMenu.addEventListener("click", function () {
   menu.classList.remove("active");
   document.body.classList.remove("static");
 });
-
 let i = 0;
 
 window.addEventListener("DOMContentLoaded", function () {

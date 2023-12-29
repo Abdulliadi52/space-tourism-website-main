@@ -116,7 +116,7 @@ section {
 @keyframes zoomImage {
   0%,
   100% {
-    transform: scale(0.1) translate(0, 0) rotate(0deg);
+    transform: scale(1) translate(0, 0) rotate(0deg);
   }
   25% {
     transform: scale(0.3) translate(500px, 100px) rotate(90deg);
@@ -153,6 +153,7 @@ section {
   align-items: flex-start;
   justify-content: flex-start;
   color: whitesmoke;
+  z-index: 1000000000;
 }
 .select {
   display: flex;
@@ -161,6 +162,7 @@ section {
   gap: 40px;
   font-size: small;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 .btn {
   cursor: pointer;
@@ -201,6 +203,9 @@ aside h3 {
 }
 
 @media screen and (max-width: 890px) {
+  .destination {
+    animation: unset;
+  }
   @keyframes zoomInOut {
     0% {
       background-size: 300%;
@@ -271,6 +276,7 @@ aside h3 {
     padding-bottom: 30px;
     height: 100%;
     background-image: url(/assets/destination/background-destination-tablet.jpg);
+    animation: zoomInOut 20s linear infinite forwards;
   }
 
   header {
