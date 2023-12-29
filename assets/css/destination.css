@@ -294,7 +294,7 @@ aside h3 {
     width: 100%;
   }
   .destination-text {
-    width: 90%;
+    width: 100%;
     text-align: center;
     align-items: center;
   }
@@ -314,6 +314,20 @@ aside h3 {
   }
   .logo {
     margin-right: 0;
+  }
+  .info {
+    border-bottom: 0px;
+  }
+  aside {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  aside h4 {
+    font-size: 20px;
+  }
+  aside h3 {
+    font-size: 30px;
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 450px) {
