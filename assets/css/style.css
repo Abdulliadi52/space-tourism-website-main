@@ -82,7 +82,7 @@ header {
   display: none;
   cursor: pointer;
 }
-section {
+.section {
   display: flex;
   align-items: center;
   margin-top: 10%;
@@ -220,7 +220,7 @@ section {
     background-image: url(/assets/home/background-home-tablet.jpg);
     animation: zoomInOut 20s linear infinite forwards;
   }
-  section {
+  .section {
     flex-direction: column;
     width: 100%;
     gap: 50px;

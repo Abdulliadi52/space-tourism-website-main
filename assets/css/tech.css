@@ -95,7 +95,7 @@ header {
   color: gray;
 }
 
-section {
+.section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -254,7 +254,7 @@ section {
   .head {
     padding-left: 1rem;
   }
-  section {
+  .section {
     flex-direction: column-reverse;
     width: 100%;
     padding: 0px 20px;

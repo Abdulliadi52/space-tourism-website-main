@@ -99,7 +99,7 @@ header {
 .head span {
   color: gray;
 }
-section {
+.section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,7 +244,7 @@ section {
     align-items: center;
     justify-content: center;
   }
-  section {
+  .section {
     flex-direction: column;
     width: 100%;
     gap: 2rem;

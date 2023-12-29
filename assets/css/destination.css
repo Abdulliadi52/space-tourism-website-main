@@ -87,7 +87,7 @@ header {
   display: none;
   cursor: pointer;
 }
-section {
+.section {
   display: flex;
   align-items: center;
   justify-content: stretch;
@@ -291,7 +291,7 @@ aside h3 {
   .head {
     padding-left: 1rem;
   }
-  section {
+  .section {
     flex-direction: column;
     max-width: 100%;
     gap: 5rem;
