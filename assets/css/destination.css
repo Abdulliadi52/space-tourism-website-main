@@ -28,7 +28,7 @@ body {
     background-size: 100%;
   }
   50% {
-    background-size: 150%;
+    background-size: 120%;
   }
   100% {
     background-size: 100%;
@@ -110,36 +110,35 @@ section {
   max-width: 80%;
   height: 100%;
   object-fit: cover;
-  animation:
-    rotateMap 5s linear infinite,
-    zoomImage 20s linear infinite forwards;
+  animation: zoomImage 30s linear infinite forwards;
 }
 
 @keyframes zoomImage {
-  0% {
-    transform: scale(0.1) translate(0, 0);
+  0%,
+  100% {
+    transform: scale(0.1) translate(0, 0) rotate(0deg);
   }
   25% {
-    transform: scale(0.3) translate(100px, 100px);
+    transform: scale(0.3) translate(500px, 100px) rotate(90deg);
   }
   50% {
-    transform: scale(0.5) translate(100px, 0px); /* Adjust the scale factor as needed */
+    transform: scale(0.5) translate(100px, 0px) rotate(180deg); /* Adjust the scale factor as needed */
   }
   75% {
-    transform: scale(0.7) translate(0px, 0px);
+    transform: scale(0.7) translate(0px, 0px) rotate(270deg);
   }
-  100% {
-    transform: scale(1) translate(0, 0);
-  }
+  /* 100% {
+    transform: scale(1) translate(0, 0) rotate(360deg);
+  } */
 }
-@keyframes rotateMap {
+/* @keyframes rotateMap {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 .destination-img {
   width: 50%;
   display: flex;
@@ -204,7 +203,7 @@ aside h3 {
 @media screen and (max-width: 890px) {
   @keyframes zoomInOut {
     0% {
-      background-size: 400%;
+      background-size: 300%;
     }
     50% {
       background-size: 250%;
@@ -336,6 +335,22 @@ aside h3 {
     }
     100% {
       background-size: 170%;
+    }
+  }
+
+  @keyframes zoomImage {
+    0%,
+    100% {
+      transform: scale(0.1) translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: scale(0.3) translate(50px, 300px) rotate(90deg);
+    }
+    50% {
+      transform: scale(0.5) translate(-100px, 0px) rotate(180deg);
+    }
+    75% {
+      transform: scale(0.7) translate(0px, 0px) rotate(270deg);
     }
   }
 }
