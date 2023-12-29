@@ -154,13 +154,13 @@ section {
 @media screen and (max-width: 890px) {
   @keyframes zoomInOut {
     0% {
-      background-size: 300%;
+      background-size: 200vh;
     }
     50% {
-      background-size: 250%;
+      background-size: 200vh;
     }
     100% {
-      background-size: 200%;
+      background-size: 200vh;
     }
   }
 }
