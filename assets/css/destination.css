@@ -332,7 +332,6 @@ aside h3 {
     padding-bottom: 30px;
     height: 100%;
     background-image: url(/assets/destination/background-destination-tablet.jpg);
-    animation: zoomInOut 20s linear infinite forwards;
   }
 
   header {
@@ -399,6 +398,7 @@ aside h3 {
 @media screen and (max-width: 460px) {
   .destination {
     background-image: url(/assets/destination/background-destination-mobile.jpg);
+    animation: zoomInOut 20s linear infinite forwards;
   }
   .nav {
     width: 60%;

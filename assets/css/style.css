@@ -304,7 +304,7 @@ header {
 @media screen and (max-width: 450px) {
   .home {
     background-image: url(/assets/home/background-home-mobile.jpg);
-    /* animation: zoomInOut 20s linear infinite forwards; */
+    animation: zoomInOut 20s linear infinite forwards;
   }
   .nav {
     width: 60%;
@@ -339,7 +339,7 @@ header {
   .circle a {
     font-size: 14px;
   }
-  /* @keyframes zoomInOut {
+  @keyframes zoomInOut {
     0% {
       background-size: 140%;
     }
@@ -349,5 +349,5 @@ header {
     100% {
       background-size: 170%;
     }
-  } */
+  }
 }
