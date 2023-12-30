@@ -60,7 +60,7 @@ header {
 .nav li {
   color: white;
   font-weight: 600;
-  padding: 20px;
+  padding: 30px 20px;
   text-wrap: nowrap;
 }
 .line {
@@ -227,6 +227,9 @@ header {
     transition: all 0.9s ease-in-out;
     z-index: 1000000;
   }
+  .nav li {
+    padding: 20px;
+  }
   .nav.active {
     transform: translate(0);
     opacity: 100;
@@ -254,9 +257,6 @@ header {
   }
   .burger {
     display: block;
-  }
-  .home-text p {
-    /* width: 360px; */
   }
 }
 

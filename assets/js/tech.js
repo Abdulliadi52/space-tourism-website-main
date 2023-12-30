@@ -65,7 +65,7 @@ function currenTarget() {
   info.textContent = present.description;
   // img.src = present.images.portrait;
 
-  if (window.innerWidth < 760) {
+  if (window.innerWidth < 1000) {
     img.src = present.images.landscape;
   } else {
     img.src = present.images.portrait;

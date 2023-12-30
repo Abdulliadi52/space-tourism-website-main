@@ -77,7 +77,7 @@ header {
 .nav li {
   color: white;
   font-weight: 600;
-  padding: 20px;
+  padding: 30px 20px;
   text-wrap: nowrap;
 }
 .line {
@@ -269,6 +269,9 @@ header {
     transform: translate(100%);
     opacity: 0;
     transition: all 0.5s linear;
+  }
+  .nav li {
+    padding: 20px;
   }
   .nav.active {
     transform: translate(0);
