@@ -1,41 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Barlow", sans-serif;
+  /* font-family: 'Bellefair', serif; */
 }
 .home {
   max-width: 100vw;
   min-height: 100vh;
   background-image: url(/assets/home/background-home-desktop.jpg);
+  mix-blend-mode: screen;
   background-position: center;
   background-size: cover;
-  /* background-attachment: fixed; */
   position: relative;
   padding-top: 30px;
   position: relative;
-  animation: zoomInOut 20s linear infinite forwards;
-}
-
-@keyframes zoomInOut {
-  0% {
-    background-size: 100%;
-  }
-  50% {
-    background-size: 120%;
-  }
-  100% {
-    background-size: 100%;
-  }
 }
 
 header {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   padding-left: 50px;
+  margin-bottom: 3.5rem;
   /* position: relative; */
 }
 .logo {
@@ -48,13 +37,19 @@ header {
   list-style: none;
   gap: 10px;
   width: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
 }
 .nav a {
-  color: white;
   font-weight: 600;
   text-decoration: none;
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   transition: all 0.4s ease-in-out;
 }
 .nav .link {
@@ -66,7 +61,6 @@ header {
   color: white;
   font-weight: 600;
   padding: 20px;
-  font-size: 14px;
   text-wrap: nowrap;
 }
 .line {
@@ -85,22 +79,23 @@ header {
 .section {
   display: flex;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 150px;
 }
 .home-text {
-  width: 50%;
-  display: flex;
+  display: inline-flex;
+  padding-right: 5px;
   flex-direction: column;
-  align-items: start;
   justify-content: center;
-  padding-left: 60px;
-  color: white;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 120px;
+  width: 50%;
 }
 .home-text h2 {
   letter-spacing: 4px;
   font-weight: 500;
   text-transform: uppercase;
-  color: gray;
+  color: #d0d6f9;
   font-size: 20px;
 }
 .home-text h1 {
@@ -108,10 +103,16 @@ header {
   text-transform: uppercase;
   letter-spacing: 10px;
   font-weight: 300;
+  color: #fff;
+  font-family: "Bellefair", serif;
 }
 .home-text p {
-  max-width: 550px;
-  color: gray;
+  color: #d0d6f9;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
 }
 .home-explore {
   width: 50%;
@@ -120,8 +121,9 @@ header {
   justify-content: center;
 }
 .home-explore .circle {
-  width: 220px;
-  height: 220px;
+  width: 274px;
+  flex-shrink: 0;
+  height: 274px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +131,7 @@ header {
   /* background-color: white; */
   background-image: url(/assets/home/Screenshot_2023-12-29_164744-removebg-preview.png);
   background-position: center;
-  background-size: cover;
+  background-size: initial;
   transition: all 0.6s ease-in-out;
 }
 
@@ -138,27 +140,73 @@ header {
 }
 
 .circle a {
-  font-weight: 100;
-  letter-spacing: 0.3rem;
-  font-size: 16px;
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   text-decoration: none;
-  color: white;
+  letter-spacing: 2px;
 }
 @media screen and (max-width: 890px) {
   .home {
     animation: unset;
+    background-image: url(/assets/home/background-home-tablet.jpg);
   }
-  /* @keyframes zoomInOut {
-    0% {
-      background-size: 200vh;
-    }
-    50% {
-      background-size: 200vh;
-    }
-    100% {
-      background-size: 200vh;
-    }
-  } */
+  .section {
+    flex-direction: column;
+    margin-top: 150px;
+    gap: 100px;
+  }
+  .home-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 100px;
+    /* font-family: "Bellefair", serif; */
+  }
+  .home-text h2 {
+    color: #d0d6f9;
+    text-align: center;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.375px;
+  }
+  .home-text h1 {
+    color: #fff;
+    font-family: Bellefair;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150px; /* 100% */
+  }
+  .home-text p {
+    width: 70%;
+    color: #d0d6f9;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  .home-explore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-explore .circle {
+    width: 242px;
+    height: 242px;
+    /* box-shadow: 0px 4px 10px 60px #979797; */
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -208,28 +256,28 @@ header {
     display: block;
   }
   .home-text p {
-    width: 360px;
+    /* width: 360px; */
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 790px) {
   .home {
     padding-top: 20px;
     padding-bottom: 30px;
     height: 100%;
     background-image: url(/assets/home/background-home-tablet.jpg);
-    animation: zoomInOut 20s linear infinite forwards;
   }
   .section {
     flex-direction: column;
     width: 100%;
     gap: 50px;
     padding: 20px;
+    margin-top: 100px;
   }
   .home-text {
     width: 100%;
     align-items: center;
-    padding-left: 0px;
+    padding: 0px;
   }
   .home-text h1 {
     font-size: 80px;
@@ -240,6 +288,7 @@ header {
   .home-text p {
     text-align: center;
     width: fit-content;
+    width: 70%;
   }
   header {
     padding-left: 20px;
@@ -255,9 +304,30 @@ header {
 @media screen and (max-width: 450px) {
   .home {
     background-image: url(/assets/home/background-home-mobile.jpg);
+    /* animation: zoomInOut 20s linear infinite forwards; */
   }
   .nav {
     width: 60%;
+  }
+  .section {
+    margin-top: 70px;
+  }
+  .home-text {
+    gap: 2px;
+  }
+  .home-text h2 {
+    color: #d0d6f9;
+    text-align: center;
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+  }
+  .home-text p {
+    width: 100%;
+    font-size: 15px;
   }
   .home-explore {
     padding: 30px 0px;
@@ -269,7 +339,7 @@ header {
   .circle a {
     font-size: 14px;
   }
-  @keyframes zoomInOut {
+  /* @keyframes zoomInOut {
     0% {
       background-size: 140%;
     }
@@ -279,5 +349,5 @@ header {
     100% {
       background-size: 170%;
     }
-  }
+  } */
 }

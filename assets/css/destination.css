@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +19,10 @@ body {
   position: relative;
   padding-top: 30px;
   position: relative;
-  padding: 35px;
-  animation: zoomInOut 20s linear infinite forwards;
+  /* padding: 35px; */
+  /* animation: zoomInOut 20s linear infinite forwards; */
 }
-
+/* 
 @keyframes zoomInOut {
   0% {
     background-size: 100%;
@@ -33,14 +33,14 @@ body {
   100% {
     background-size: 100%;
   }
-}
+} */
 
 header {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   padding-left: 50px;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   /* position: relative; */
 }
 .logo {
@@ -53,13 +53,19 @@ header {
   list-style: none;
   gap: 10px;
   width: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
 }
 .nav a {
-  color: white;
   font-weight: 600;
   text-decoration: none;
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   transition: all 0.4s ease-in-out;
 }
 .nav .link {
@@ -71,7 +77,6 @@ header {
   color: white;
   font-weight: 600;
   padding: 20px;
-  font-size: 14px;
   text-wrap: nowrap;
 }
 .line {
@@ -94,16 +99,25 @@ header {
   gap: 2rem;
 }
 .head {
-  color: white;
-  padding-left: 5rem;
-  margin-bottom: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: 300;
+  color: #fff;
+  font-family: Barlow Condensed;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.375px;
+  text-transform: uppercase;
+  margin-left: 2rem;
 }
 .head span {
-  color: gray;
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.375px;
+  opacity: 0.25;
 }
 
 .image {
@@ -116,7 +130,7 @@ header {
 @keyframes zoomImage {
   0%,
   100% {
-    transform: scale(1) translate(0, 0) rotate(0deg);
+    transform: scale(0.8) translate(0, 0) rotate(0deg);
   }
   25% {
     transform: scale(0.3) translate(500px, 100px) rotate(90deg);
@@ -160,29 +174,48 @@ header {
   align-items: center;
   text-transform: uppercase;
   gap: 40px;
-  font-size: small;
   margin-bottom: 1rem;
-  font-weight: 700;
+  color: #d0d6f9;
+  font-family: Barlow Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.7px;
 }
 .btn {
   cursor: pointer;
 }
+.btn:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+  text-decoration-color: #979797;
+}
 .stay {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
-  text-underline-offset: 6px;
+  text-underline-offset: 7px;
 }
 .name {
-  font-weight: 300;
-  font-size: 70px;
+  color: #fff;
   text-transform: uppercase;
+  font-family: Bellefair;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .info {
+  color: #d0d6f9;
   width: 90%;
-  font-size: 14px;
-  line-height: 30px;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid gray;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #383b4b;
 }
 aside {
   display: flex;
@@ -191,15 +224,23 @@ aside {
   margin-top: 1rem;
 }
 aside h4 {
-  font-size: x-small;
+  color: #d0d6f9;
+  font-family: Barlow Condensed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.362px;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  color: gray;
 }
 aside h3 {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   text-transform: uppercase;
-  font-weight: 200;
-  letter-spacing: 0.1rem;
 }
 
 @media screen and (max-width: 890px) {
@@ -216,6 +257,21 @@ aside h3 {
     100% {
       background-size: 200%;
     }
+  }
+  .section {
+    flex-direction: column;
+    margin-top: 80px;
+    gap: 50px;
+  }
+  .destination-img {
+    width: 100%;
+  }
+  .destination-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -308,9 +364,15 @@ aside h3 {
     max-width: 60%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .image {
     max-width: 80%;
+  }
+  .head {
+    font-size: 16px;
+  }
+  .section {
+    margin-top: 70px;
   }
   .destination {
     padding: 20px 20px 30px;
@@ -321,12 +383,10 @@ aside h3 {
   .logo {
     margin-right: 0;
   }
-  .info {
-    border-bottom: 0px;
-  }
   aside {
     flex-direction: column;
     gap: 3rem;
+    padding: 1rem 0px;
   }
   aside h4 {
     font-size: 20px;
@@ -336,7 +396,7 @@ aside h3 {
     font-weight: 400;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 460px) {
   .destination {
     background-image: url(/assets/destination/background-destination-mobile.jpg);
   }
@@ -344,7 +404,39 @@ aside h3 {
     width: 60%;
   }
   .head {
-    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-family: Barlow Condensed;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+  }
+  .section {
+    margin-top: 40px;
+  }
+  .select {
+    font-size: 13px;
+    gap: 25px;
+  }
+  .info {
+    width: 100%;
+    font-size: 15px;
+  }
+  .name {
+    color: #fff;
+    text-align: center;
+    font-family: Bellefair;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  aside h3 {
+    font-size: 28px;
   }
   @keyframes zoomInOut {
     0% {

@@ -91,6 +91,7 @@ btn3.addEventListener("click", function () {
 
 btn4.addEventListener("click", function () {
   i = 3;
+  // img.width = "500px";
   // image.style.width = "90%";
   currentTarget();
 });

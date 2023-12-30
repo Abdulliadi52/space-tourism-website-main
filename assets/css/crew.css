@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 
 * {
   margin: 0;
@@ -20,9 +21,9 @@ body {
   padding-top: 30px;
   position: relative;
   /* overflow: hidden; */
-  animation: zoomInOut 20s linear infinite forwards;
+  /* animation: zoomInOut 20s linear infinite forwards; */
 }
-
+/* 
 @keyframes zoomInOut {
   0% {
     background-size: 100%;
@@ -33,14 +34,14 @@ body {
   100% {
     background-size: 100%;
   }
-}
+} */
 
 header {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   padding-left: 50px;
-  margin-bottom: 5vh;
+  margin-bottom: 3.5rem;
   /* position: relative; */
 }
 .logo {
@@ -53,13 +54,19 @@ header {
   list-style: none;
   gap: 10px;
   width: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
 }
 .nav a {
-  color: white;
   font-weight: 600;
   text-decoration: none;
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   transition: all 0.4s ease-in-out;
 }
 .nav .link {
@@ -71,7 +78,6 @@ header {
   color: white;
   font-weight: 600;
   padding: 20px;
-  font-size: 14px;
   text-wrap: nowrap;
 }
 .line {
@@ -88,58 +94,95 @@ header {
   cursor: pointer;
 }
 .head {
-  color: white;
-  padding-left: 2rem;
-  margin-bottom: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight: 300;
+  color: #fff;
+  font-family: Barlow Condensed;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.375px;
+  text-transform: uppercase;
+  margin-left: 3rem;
 }
 .head span {
-  color: gray;
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.375px;
+  opacity: 0.25;
 }
+
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0rem;
 }
 .crew-text {
   width: 50%;
-  padding-left: 4rem;
+  padding-left: 50px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .crew-text .role {
-  text-transform: uppercase;
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 32px;
+  font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.3rem;
-  color: gray;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.5042;
 }
 .crew-text .name {
-  text-transform: uppercase;
+  color: #fff;
+  font-family: Bellefair;
   font-size: 45px;
+  font-style: normal;
   font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 .crew-text .info {
-  color: gray;
-  margin-bottom: 3rem;
-  width: 85%;
+  color: #d0d6f9;
+  font-family: Barlow;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  width: 87%;
 }
 .btns {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.btns .btn {
-  width: 20px;
-  height: 20px;
+.btn {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.1744;
+  background-color: #fff;
   border: 1px solid white;
   border-radius: 50%;
   cursor: pointer;
 }
+/* .btns .btn:hover {
+  background-color:;
+} */
 .colored {
   background-color: white;
+  opacity: 1;
 }
 .crew-image {
   width: 50%;
@@ -148,19 +191,21 @@ header {
   justify-content: center;
 }
 .crew-image img {
-  width: 100%;
-  max-width: 70%;
+  width: 400px;
+  /* height: 654px; */
+  flex-shrink: 0;
+  object-fit: initial;
 }
 @media screen and (max-width: 950px) {
   .crew-text .name {
     font-size: 40px;
   }
   .crew-image img {
-    width: 80%;
+    width: 70%;
   }
 }
 @media screen and (max-width: 890px) {
-  .crew {
+  /* .crew {
     animation: unset;
   }
   @keyframes zoomInOut {
@@ -173,6 +218,32 @@ header {
     100% {
       background-size: 200%;
     }
+  } */
+  .head {
+    margin-bottom: 20px;
+  }
+  .section {
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .column {
+    width: 100%;
+    align-items: center;
+  }
+
+  .crew-text {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  .crew-text .info {
+    width: 70%;
+  }
+  .crew-image {
+    width: 100%;
   }
 }
 
@@ -181,7 +252,7 @@ header {
     font-size: 30px;
   }
   .crew-text .info {
-    width: 100%;
+    width: 80%;
   }
   .line {
     display: none;
@@ -260,7 +331,7 @@ header {
   }
   .crew {
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     height: 100%;
     background-image: url(/assets/crew/background-crew-tablet.jpg);
     animation: zoomInOut 20s linear infinite forwards;
@@ -275,11 +346,44 @@ header {
   .nav .close {
     margin-right: 0px;
   }
+  .crew-text .info {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .crew-image {
+    border-bottom: 1px solid #383b4b;
+  }
+  .crew-text {
+    margin-bottom: 40px;
+  }
+  .crew-image img {
+    width: 80%;
+  }
+  .section {
+    flex-direction: column-reverse;
+  }
+  .crew-text {
+    flex-direction: column-reverse;
+  }
+  .column {
+    gap: 10px;
+  }
+  .crew-text .role {
+    font-size: 20px;
+  }
+  .crew-text .name {
+    font-size: 28px;
+  }
+  .crew-text .info {
+    font-size: 16px;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .crew-image img {
-    width: 100%;
+    width: 70%;
   }
   .crew {
     background-image: url(/assets/crew/background-crew-mobile.jpg);
@@ -289,6 +393,17 @@ header {
   }
   .head {
     font-size: 14px;
+    text-align: center;
+  }
+  .crew-text .role {
+    font-size: 16px;
+  }
+  .crew-text .name {
+    font-size: 24px;
+  }
+  .crew-text .info {
+    font-size: 15px;
+    width: 90%;
   }
 
   @keyframes zoomInOut {

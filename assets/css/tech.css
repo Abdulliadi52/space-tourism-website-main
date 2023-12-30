@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -33,9 +33,9 @@
 header {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   padding-left: 50px;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   /* position: relative; */
 }
 .logo {
@@ -48,13 +48,19 @@ header {
   list-style: none;
   gap: 10px;
   width: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
 }
 .nav a {
-  color: white;
   font-weight: 600;
   text-decoration: none;
+  color: #fff;
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+  letter-spacing: 2.7px;
   transition: all 0.4s ease-in-out;
 }
 .nav .link {
@@ -66,9 +72,8 @@ header {
   color: white;
   font-weight: 600;
   padding: 20px;
-  font-size: 14px;
   text-wrap: nowrap;
-}
+} 
 .line {
   width: 40%;
   height: 2px;
