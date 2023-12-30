@@ -413,6 +413,8 @@ aside h3 {
     line-height: normal;
     letter-spacing: 2.7px;
     text-transform: uppercase;
+    padding-left: 0px;
+    margin-left: 0px;
   }
   .section {
     margin-top: 40px;
