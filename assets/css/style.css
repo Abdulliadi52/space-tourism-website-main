@@ -149,7 +149,7 @@ header {
   text-decoration: none;
   letter-spacing: 2px;
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1000px) {
   .home {
     animation: unset;
     background-image: url(/assets/home/background-home-tablet.jpg);
